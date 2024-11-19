@@ -40,20 +40,3 @@ class User:
             self.age = new_age
         except ValueError as e:
             print(f"Ошибка: {e}")
-# Создание нового пользователя
-user = User('Евгений', 28)
-
-# Получение имени и возраста
-print(user.get_name())
-print(user.get_age())
-
-# Изменение имени
-user.set_name('Арсений')
-print(user.get_name())
-
-# Ошибки при установке неправильных значений
-try:
-    user.set_name("123")       # Некорректное имя
-    user.set_age(-10)          # Некорректный возраст
-except ValueError as e:
-    print(f"Ошибка: {e}")
