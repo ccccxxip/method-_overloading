@@ -33,3 +33,21 @@ class BankAccount:
         self.withdraw(amount)
         # Пополняем баланс указанного счета
         account.deposit(amount)
+
+account1 = BankAccount(1000)
+account2 = BankAccount()
+
+print(account1.get_balance())  # Выведет 1000
+
+account1.deposit(500)
+print(account1.get_balance())  # Выведет 1500
+
+try:
+    account1.transfer(account2, 2000)
+except ValueError as e:
+    print(e)  # На счете недостаточно средств
+
+account1.transfer(account2, 500)
+
+print(account1.get_balance())  # Выведет 1000
+print(account2.get_balance())  # Второй счет получит 500
