@@ -41,15 +41,15 @@ class User:
         except ValueError as e:
             print(f"Ошибка: {e}")
 # Создание нового пользователя
-user = User('Иван', 30)
+user = User('Евгений', 28)
 
 # Получение имени и возраста
-print(user.get_name())  # Иван
-print(user.get_age())   # 30
+print(user.get_name())
+print(user.get_age())
 
 # Изменение имени
-user.set_name('Петр')
-print(user.get_name())  # Петр
+user.set_name('Арсений')
+print(user.get_name())
 
 # Ошибки при установке неправильных значений
 try:
